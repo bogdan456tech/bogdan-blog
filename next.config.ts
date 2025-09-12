@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
-  basePath: "/bogdan-blog",     // 👈 important for subfolder deploy
-  assetPrefix: "/bogdan-blog/", // 👈 ensures CSS/JS load correctly
+  basePath: isProd ? "/bogdan-blog" : undefined,
+  assetPrefix: isProd ? "/bogdan-blog/" : undefined,
 };
 
 export default nextConfig;
