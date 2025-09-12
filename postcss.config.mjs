@@ -1,5 +1,8 @@
+/** @type {import('postcss-load-config').Config} */
 const config = {
-  plugins: ["@tailwindcss/postcss"],
+  plugins: {
+    "@tailwindcss/postcss": {}, // 👈 official plugin for Next.js 15
+  },
 };
 
 export default config;
