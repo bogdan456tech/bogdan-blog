@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import { getPostBySlug, getSortedPostsMeta, type Post } from "@/lib/posts";
+import Link from "next/link"; // add this
 
 export async function getStaticPaths() {
   const posts = getSortedPostsMeta();
