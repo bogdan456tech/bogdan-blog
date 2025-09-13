@@ -9,8 +9,11 @@ export default function Layout({ children }: { children: ReactNode }) {
           <Link href="/" className="font-semibold">Bogdan Arama</Link>
           <div className="space-x-4">
             <Link href="/">Home</Link>
-            <Link href="/blog">Blog</Link>
             <Link href="/about">About</Link>
+            <Link href="/stack">Stack</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/values">Values</Link>
+
           </div>
         </nav>
       </header>

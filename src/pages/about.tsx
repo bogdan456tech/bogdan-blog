@@ -10,7 +10,7 @@ export default function About() {
       </Head>
       <article className="prose">
         <h1>About me</h1>
-        <p>Short bio, interests, and what I’m building.</p>
+        <p>Software Engineering Student and saxophone player</p>
       </article>
     </Layout>
   );
