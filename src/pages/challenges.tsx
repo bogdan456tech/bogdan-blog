@@ -7,22 +7,47 @@ export default function Challenges() {
     <Layout>
       <Head>
         <title>Challenges — Bogdan Arama</title>
+        <meta
+          name="description"
+          content="Personal challenges I set for myself as a developer — including daily study, project practice, and more."
+        />
       </Head>
 
-      <h1 className="text-3xl font-bold mb-6">My Challenges</h1>
-
-      <div className="p-6 rounded-2xl shadow-md bg-slate-50 text-left hover:bg-blue-50 transition duration-300 mb-6">
-        <h2 className="text-xl font-semibold mb-2">Daily Study Journal</h2>
-        <p className="text-slate-700">
-          From 13 to 30 September 2025, I will write daily about my learning at
-          university, the programming concepts I study, and the tasks I complete
-          in personal projects or at my internship.
+      <section className="max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold mb-6 text-slate-900">My Challenges</h1>
+        <p className="text-slate-700 leading-relaxed mb-12">
+          I use challenges to keep myself disciplined, consistent, and motivated.
+          Each challenge helps me grow as a developer by combining theory with practice.
         </p>
 
-        {/* Tracker for days 13–30 */}
-        <ChallengeTracker start={13} end={30} challengeName="daily-study-journal" />
+        {/* Challenge 1 */}
+        <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
+          <h2 className="text-xl font-semibold mb-2 text-blue-600">
+            Daily Study Journal
+          </h2>
+          <p className="text-slate-700 mb-4">
+            From 13 to 30 September 2025, I will write daily about my learning at
+            university, the programming concepts I study, and the tasks I complete
+            in personal projects or at my internship.
+          </p>
+          {/* Tracker for days 13–30 */}
+          <ChallengeTracker start={13} end={30} challengeName="daily-study-journal" />
+          <p className="text-xs text-slate-500 mt-2">
+            Progress is updated manually by me in Supabase.
+          </p>
+        </div>
 
-      </div>
+        {/* Challenge 2 */}
+        <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
+          <h2 className="text-xl font-semibold mb-2 text-blue-600">
+            Project Practice
+          </h2>
+          <p className="text-slate-700">
+            Build at least one mini project every month using my stack:
+            React, Next.js, Supabase, Strapi, Tailwind, and ShadCN.
+          </p>
+        </div>
+      </section>
     </Layout>
   );
 }
