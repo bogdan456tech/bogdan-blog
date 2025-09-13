@@ -29,7 +29,7 @@ export default function Challenges() {
             From 13 to 26 September 2025, I will write daily about what I learn and the tasks I complete at my internship
           </p>
           {/* Tracker for days 13–30 */}
-          <ChallengeTracker start={13} end={26} challengeName="daily-study-journal" />
+          <ChallengeTracker start={13} end={26} challengeName="Daily Internship Blog" />
         </div>
 
       </section>
