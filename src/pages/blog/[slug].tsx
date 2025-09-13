@@ -27,7 +27,7 @@ export default function PostPage({ post }: { post: Post }) {
       <article className="max-w-3xl mx-auto prose prose-slate lg:prose-lg">
         <h1 className="mb-2">{post.title}</h1>
         <p className="text-slate-500 text-sm mb-6">{post.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>
 
       <div className="max-w-3xl mx-auto mt-12">
