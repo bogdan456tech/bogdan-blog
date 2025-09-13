@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "@/components/Layout";
+import Link from "next/link"; // ✅ now we’ll actually use it
 import { getPostBySlug, getSortedPostsMeta, type Post } from "@/lib/posts";
-import Link from "next/link"; // add this
 
 export async function getStaticPaths() {
   const posts = getSortedPostsMeta();
@@ -31,12 +31,10 @@ export default function PostPage({ post }: { post: Post }) {
       </article>
 
       <div className="max-w-3xl mx-auto mt-12">
-        <a
-          href="/blog"
-          className="text-slate-800 hover:underline font-medium"
-        >
+        {/* ✅ replaced <a> with Link */}
+        <Link href="/blog" className="text-slate-800 hover:underline font-medium">
           ← Back to Blog
-        </a>
+        </Link>
       </div>
     </Layout>
   );
