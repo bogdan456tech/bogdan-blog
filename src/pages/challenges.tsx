@@ -32,21 +32,8 @@ export default function Challenges() {
           </p>
           {/* Tracker for days 13–30 */}
           <ChallengeTracker start={13} end={30} challengeName="daily-study-journal" />
-          <p className="text-xs text-slate-500 mt-2">
-            Progress is updated manually by me in Supabase.
-          </p>
         </div>
 
-        {/* Challenge 2 */}
-        <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mb-2 text-slate-800">
-            Project Practice
-          </h2>
-          <p className="text-slate-700">
-            Build at least one mini project every month using my stack:
-            React, Next.js, Supabase, Strapi, Tailwind, and ShadCN.
-          </p>
-        </div>
       </section>
     </Layout>
   );
