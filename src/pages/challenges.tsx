@@ -22,7 +22,7 @@ export default function Challenges() {
 
         {/* Challenge 1 */}
         <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mb-2 text-blue-600">
+          <h2 className="text-xl font-semibold mb-2 text-slate-800">
             Daily Study Journal
           </h2>
           <p className="text-slate-700 mb-4">
@@ -39,7 +39,7 @@ export default function Challenges() {
 
         {/* Challenge 2 */}
         <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mb-2 text-blue-600">
+          <h2 className="text-xl font-semibold mb-2 text-slate-800">
             Project Practice
           </h2>
           <p className="text-slate-700">

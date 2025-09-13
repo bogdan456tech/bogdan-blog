@@ -33,7 +33,7 @@ export default function Blog({ posts }: { posts: PostMeta[] }) {
             >
               <Link
                 href={`/blog/${p.slug}`}
-                className="text-xl font-semibold text-blue-600 hover:underline"
+                className="text-xl font-semibold text-slate-800 hover:underline"
               >
                 {p.title}
               </Link>
@@ -43,7 +43,7 @@ export default function Blog({ posts }: { posts: PostMeta[] }) {
               )}
               <Link
                 href={`/blog/${p.slug}`}
-                className="mt-4 inline-block text-blue-600 hover:underline font-medium"
+                className="mt-4 inline-block text-slate-800 hover:underline font-medium"
               >
                 Read more →
               </Link>

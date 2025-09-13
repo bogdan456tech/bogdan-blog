@@ -7,16 +7,19 @@ export default function Layout({ children }: { children: ReactNode }) {
       {/* ✅ Navbar */}
       <header className="bg-white shadow sticky top-0 z-50">
         <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-          <Link href="/" className="text-xl font-bold text-blue-600 hover:text-blue-700">
+          <Link
+            href="/"
+            className="text-xl font-bold text-slate-800 hover:text-slate-900"
+          >
             Bogdan Arama
           </Link>
           <div className="flex space-x-6 text-slate-700 font-medium">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
-            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-            <Link href="/about" className="hover:text-blue-600">About</Link>
-            <Link href="/values" className="hover:text-blue-600">Values</Link>
-            <Link href="/stack" className="hover:text-blue-600">Stack</Link>
-            <Link href="/challenges" className="hover:text-blue-600">Challenges</Link>
+            <Link href="/" className="hover:text-slate-900">Home</Link>
+            <Link href="/blog" className="hover:text-slate-900">Blog</Link>
+            <Link href="/about" className="hover:text-slate-900">About</Link>
+            <Link href="/values" className="hover:text-slate-900">Values</Link>
+            <Link href="/stack" className="hover:text-slate-900">Stack</Link>
+            <Link href="/challenges" className="hover:text-slate-900">Challenges</Link>
           </div>
         </nav>
       </header>

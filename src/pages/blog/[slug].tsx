@@ -32,7 +32,7 @@ export default function PostPage({ post }: { post: Post }) {
       <div className="max-w-3xl mx-auto mt-12">
         <a
           href="/blog"
-          className="text-blue-600 hover:underline font-medium"
+          className="text-slate-800 hover:underline font-medium"
         >
           ← Back to Blog
         </a>

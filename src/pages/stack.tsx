@@ -34,7 +34,7 @@ export default function Stack() {
               key={tool.name}
               className="p-6 bg-white rounded-xl shadow hover:shadow-md transition text-left"
             >
-              <h2 className="text-xl font-semibold text-blue-600 mb-2">{tool.name}</h2>
+              <h2 className="text-xl font-semibold text-slate-800 mb-2">{tool.name}</h2>
               <p className="text-slate-600">{tool.desc}</p>
             </div>
           ))}

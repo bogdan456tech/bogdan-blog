@@ -25,28 +25,28 @@ export default function Home() {
             On this site I share my{" "}
             <Link
               href="/blog"
-              className="font-semibold text-blue-600 hover:underline"
+              className="font-semibold text-slate-800 hover:underline"
             >
               blog posts
             </Link>
             , document my{" "}
             <Link
               href="/challenges"
-              className="font-semibold text-blue-600 hover:underline"
+              className="font-semibold text-slate-800 hover:underline"
             >
               challenges
             </Link>
             , and showcase my{" "}
             <Link
               href="/values"
-              className="font-semibold text-blue-600 hover:underline"
+              className="font-semibold text-slate-800 hover:underline"
             >
               values
             </Link>{" "}
             and{" "}
             <Link
               href="/stack"
-              className="font-semibold text-blue-600 hover:underline"
+              className="font-semibold text-slate-800 hover:underline"
             >
               stack
             </Link>
@@ -56,7 +56,7 @@ export default function Home() {
           <div className="flex justify-center gap-4">
             <Link
               href="/blog"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+              className="px-6 py-3 bg-slate-800 text-white rounded-lg shadow hover:bg-slate-900 transition"
             >
               Read Blog
             </Link>

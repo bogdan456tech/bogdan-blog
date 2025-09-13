@@ -22,7 +22,7 @@ export default function Values() {
           and as a person.
         </p>
 
-        {/* Values as interactive buttons */}
+        {/* Values as interactive cards */}
         <div className="flex flex-wrap justify-center gap-6">
           {values.map((val) => (
             <div
@@ -31,7 +31,7 @@ export default function Values() {
                 px-8 py-4 rounded-xl shadow-md text-lg font-semibold cursor-default
                 bg-white text-slate-700 
                 transition duration-300 ease-in-out
-                hover:bg-blue-600 hover:text-white hover:shadow-lg
+                hover:bg-slate-800 hover:text-white hover:shadow-lg
               "
             >
               {val}
