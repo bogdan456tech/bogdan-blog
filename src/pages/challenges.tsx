@@ -26,7 +26,7 @@ export default function Challenges() {
             Daily Intership Blog
           </h2>
           <p className="text-slate-700 mb-4">
-            From 13 to 30 September 2025, I will write daily about what I learn and the tasks I complete at my internship
+            From 13 to 26 September 2025, I will write daily about what I learn and the tasks I complete at my internship
           </p>
           {/* Tracker for days 13–30 */}
           <ChallengeTracker start={13} end={30} challengeName="daily-study-journal" />
