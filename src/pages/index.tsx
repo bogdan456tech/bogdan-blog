@@ -38,13 +38,6 @@ export default function Home() {
             </Link>
             , and showcase my{" "}
             <Link
-              href="/values"
-              className="font-semibold text-slate-800 hover:underline"
-            >
-              values
-            </Link>{" "}
-            and{" "}
-            <Link
               href="/stack"
               className="font-semibold text-slate-800 hover:underline"
             >

@@ -23,12 +23,10 @@ export default function Challenges() {
         {/* Challenge 1 */}
         <div className="p-6 mb-8 bg-white rounded-xl shadow hover:shadow-md transition">
           <h2 className="text-xl font-semibold mb-2 text-slate-800">
-            Daily Study Journal
+            Daily Intership Blog
           </h2>
           <p className="text-slate-700 mb-4">
-            From 13 to 30 September 2025, I will write daily about my learning at
-            university, the programming concepts I study, and the tasks I complete
-            in personal projects or at my internship.
+            From 13 to 30 September 2025, I will write daily about what I learn and the tasks I complete at my internship
           </p>
           {/* Tracker for days 13–30 */}
           <ChallengeTracker start={13} end={30} challengeName="daily-study-journal" />
