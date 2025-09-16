@@ -7,11 +7,19 @@ interface ChallengeTrackerProps {
   challengeName: string;
 }
 
-export default function ChallengeTracker({ start, end, challengeName }: ChallengeTrackerProps) {
-  const [checkedDays, setCheckedDays] = useState<number[]>([]);
+type ChallengeRow = {
+  date: string;
+  done: string; // "done" | "missed" | ""
+};
+
+export default function ChallengeTracker({
+  start,
+  end,
+  challengeName,
+}: ChallengeTrackerProps) {
+  const [statuses, setStatuses] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(true);
 
-  // Load from Supabase
   useEffect(() => {
     const fetchProgress = async () => {
       const { data, error } = await supabase
@@ -19,12 +27,19 @@ export default function ChallengeTracker({ start, end, challengeName }: Challeng
         .select("date, done")
         .eq("challenge_name", challengeName);
 
-      if (!error && data) {
-        const completed = data
-          .filter((d) => d.done)
-          .map((d) => new Date(d.date).getDate());
-        setCheckedDays(completed);
+      if (error) {
+        console.error("Error fetching progress:", error);
+        setLoading(false);
+        return;
       }
+
+      const map: Record<number, string> = {};
+      data.forEach((row: ChallengeRow) => {
+        const day = parseInt(row.date.slice(8, 10), 10);
+        map[day] = row.done || ""; // empty = not reached yet
+      });
+
+      setStatuses(map);
       setLoading(false);
     };
 
@@ -35,18 +50,23 @@ export default function ChallengeTracker({ start, end, challengeName }: Challeng
 
   return (
     <div className="grid grid-cols-6 gap-2 mt-4">
-      {Array.from({ length: end - start + 1 }, (_, i) => start + i).map((day) => (
-        <div
-          key={day}
-          className={`flex items-center justify-center w-10 h-10 rounded-lg border transition ${
-            checkedDays.includes(day)
-              ? "bg-green-500 text-white"
-              : "bg-white text-slate-600"
-          }`}
-        >
-          {day}
-        </div>
-      ))}
+      {Array.from({ length: end - start + 1 }, (_, i) => start + i).map(
+        (day) => {
+          const status = statuses[day] || "";
+          let classes = "bg-white text-slate-600"; // default = future
+          if (status === "done") classes = "bg-green-500 text-white";
+          if (status === "missed") classes = "bg-red-500 text-white";
+
+          return (
+            <div
+              key={day}
+              className={`flex items-center justify-center w-10 h-10 rounded-lg border transition ${classes}`}
+            >
+              {day}
+            </div>
+          );
+        }
+      )}
     </div>
   );
 }
