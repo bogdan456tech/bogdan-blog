@@ -9,7 +9,7 @@ interface ChallengeTrackerProps {
 
 type ChallengeRow = {
   date: string;
-  done: string; // "done" | "missed" | ""
+  status: string; // "done" | "missed" | ""
 };
 
 export default function ChallengeTracker({
@@ -24,7 +24,7 @@ export default function ChallengeTracker({
     const fetchProgress = async () => {
       const { data, error } = await supabase
         .from("challenges")
-        .select("date, done")
+        .select("date, status")
         .eq("challenge_name", challengeName);
 
       if (error) {
@@ -34,9 +34,9 @@ export default function ChallengeTracker({
       }
 
       const map: Record<number, string> = {};
-      data.forEach((row: ChallengeRow) => {
+      (data as ChallengeRow[]).forEach((row) => {
         const day = parseInt(row.date.slice(8, 10), 10);
-        map[day] = row.done || ""; // empty = not reached yet
+        map[day] = row.status || ""; // empty = not reached yet
       });
 
       setStatuses(map);
